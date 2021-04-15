@@ -1,0 +1,63 @@
+CREATE DATABASE prodb2;
+
+  GRANT ALL PRIVILEGES
+  ON prodb2.* TO 'projectid'@'%'
+  IDENTIFIED BY 'pro1234';
+
+  GRANT ALL PRIVILEGES
+  ON prodb2.* TO 'projectid'@'localhost'
+  IDENTIFIED BY 'pro1234';
+
+CREATE TABLE `prodb2`.`travel_route` (
+  `routeid` INT NOT NULL AUTO_INCREMENT,
+  `areacode` INT NULL,
+  `sigungucode` INT NULL,
+  `contentid` INT NULL,
+  `contenttypeid` INT NULL,
+  `eventstartdate` INT NULL,
+  `eventenddate` INT NULL,
+  `firstimage` TEXT NULL,
+  `addr1` VARCHAR(300) NULL,
+  `mapx` DOUBLE NULL,
+  `mapy` DOUBLE NULL,
+  `readcount` INT NULL,
+  `tel` VARCHAR(90) NULL,
+  `title` VARCHAR(100) NULL,
+  `choiceDate` INT NULL,
+  PRIMARY KEY (`routeid`));
+
+
+CREATE TABLE `prodb2`.`userselect` (
+  `userselect` INT NOT NULL AUTO_INCREMENT,
+  `areaCode` INT NULL,
+  `areaCodeName` VARCHAR(100) NULL,
+  `sigunguCode` INT NULL,
+  `sigunguCodeName` VARCHAR(100) NULL,
+  `personNum` INT NULL,
+  `StartDate` INT NULL,
+  `endDate` INT NULL,
+  PRIMARY KEY (`userselect`));
+
+
+CREATE TABLE `prodb2`.`user_route` (
+  `routeid` INT NOT NULL AUTO_INCREMENT,
+  `areacode` INT NULL,
+  `sigungucode` INT NULL,
+  `contentid` INT NULL,
+  `contenttypeid` INT NULL,
+  `eventstartdate` INT NULL,
+  `eventenddate` INT NULL,
+  `firstimage` TEXT NULL,
+  `addr1` VARCHAR(300) NULL,
+  `mapx` DOUBLE NULL,
+  `mapy` DOUBLE NULL,
+  `readcount` INT NULL,
+  `tel` VARCHAR(90) NULL,
+  `title` VARCHAR(100) NULL,
+  `routeName` VARCHAR(100) NULL,
+  `routeDate` VARCHAR(90) NULL,
+  `personNum` INT NULL,
+  `itemDate` INT NULL,
+  `areaName` VARCHAR(90) NULL,
+  `sigunguName` VARCHAR(90) NULL,
+  PRIMARY KEY (`routeid`));

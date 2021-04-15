@@ -1,0 +1,12 @@
+1. sql문으로 계정 및 스키마 생성
+CREATE DATABASE bdpj; 
+GRANT ALL PRIVILEGES
+ON datadb.* TO 'hj'@'localhost'
+IDENTIFIED BY 'pass1234';
+
+1-1.upload파일의 데이터들을 
+2.주소 :localhost에서 각 버튼들을 클릭해서 자료들 import
+
+3.Django 설치후 유저등록,db등록,테이블 업데이트 해주고
+
+5.실행후 크롬 주소창에 localhost/result로 실행

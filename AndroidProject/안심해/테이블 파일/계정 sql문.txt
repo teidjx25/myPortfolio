@@ -1,0 +1,4 @@
+CREATE DATABASE datadb; 
+GRANT ALL PRIVILEGES
+ON datadb.* TO 'proid'@'localhost'
+IDENTIFIED BY 'pro1234';
